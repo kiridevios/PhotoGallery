@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F717344E30B5FEA90076CE12 /* App.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F717344A30B5FEA90076CE12 /* App.xcconfig */; };
+		F717344F30B5FEA90076CE12 /* Secrets.example.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F717344C30B5FEA90076CE12 /* Secrets.example.xcconfig */; };
+		F717345030B5FEA90076CE12 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F717344B30B5FEA90076CE12 /* Secrets.xcconfig */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F7F0582730B5F4EF004658C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,14 +30,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F717344A30B5FEA90076CE12 /* App.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = App.xcconfig; sourceTree = "<group>"; };
+		F717344B30B5FEA90076CE12 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		F717344C30B5FEA90076CE12 /* Secrets.example.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.example.xcconfig; sourceTree = "<group>"; };
 		F7F0581930B5F4EE004658C0 /* PhotoGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F0582630B5F4EF004658C0 /* PhotoGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F0583030B5F4EF004658C0 /* PhotoGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F717345230B5FF620076CE12 /* Exceptions for "PhotoGallery" folder in "PhotoGallery" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F7F0581830B5F4EE004658C0 /* PhotoGallery */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F7F0581B30B5F4EE004658C0 /* PhotoGallery */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F717345230B5FF620076CE12 /* Exceptions for "PhotoGallery" folder in "PhotoGallery" target */,
+			);
 			path = PhotoGallery;
 			sourceTree = "<group>";
 		};
@@ -72,9 +94,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F717344D30B5FEA90076CE12 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F717344A30B5FEA90076CE12 /* App.xcconfig */,
+				F717344B30B5FEA90076CE12 /* Secrets.xcconfig */,
+				F717344C30B5FEA90076CE12 /* Secrets.example.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		F7F0581030B5F4EE004658C0 = {
 			isa = PBXGroup;
 			children = (
+				F717344D30B5FEA90076CE12 /* Configuration */,
 				F7F0581B30B5F4EE004658C0 /* PhotoGallery */,
 				F7F0582930B5F4EF004658C0 /* PhotoGalleryTests */,
 				F7F0583330B5F4EF004658C0 /* PhotoGalleryUITests */,
@@ -212,6 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F717344E30B5FEA90076CE12 /* App.xcconfig in Resources */,
+				F717344F30B5FEA90076CE12 /* Secrets.example.xcconfig in Resources */,
+				F717345030B5FEA90076CE12 /* Secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +307,7 @@
 /* Begin XCBuildConfiguration section */
 		F7F0583830B5F4EF004658C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F717344A30B5FEA90076CE12 /* App.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -334,6 +371,7 @@
 		};
 		F7F0583930B5F4EF004658C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F717344A30B5FEA90076CE12 /* App.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -397,11 +435,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhotoGallery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -428,11 +468,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhotoGallery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +499,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiridevios.PhotoGalleryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -478,7 +520,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiridevios.PhotoGalleryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +540,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiridevios.PhotoGalleryUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -517,6 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiridevios.PhotoGalleryUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
